@@ -55,6 +55,56 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollRightBtn.addEventListener('click', () => {
             tagsFilter.scrollBy({ left: 250, behavior: 'smooth' });
         });
+
+        // Translate vertical scroll wheel into horizontal scroll on tags slider
+        tagsFilter.addEventListener('wheel', (e) => {
+            if (tagsFilter.classList.contains('expanded')) return;
+            e.preventDefault();
+            tagsFilter.scrollLeft += e.deltaY;
+        });
+
+        // Drag to scroll functionality (mouse drag)
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let hasMoved = false;
+
+        tagsFilter.addEventListener('mousedown', (e) => {
+            isDown = true;
+            tagsFilter.classList.add('active-dragging');
+            startX = e.pageX - tagsFilter.offsetLeft;
+            scrollLeft = tagsFilter.scrollLeft;
+            hasMoved = false;
+        });
+
+        tagsFilter.addEventListener('mouseleave', () => {
+            isDown = false;
+            tagsFilter.classList.remove('active-dragging');
+        });
+
+        tagsFilter.addEventListener('mouseup', () => {
+            isDown = false;
+            tagsFilter.classList.remove('active-dragging');
+        });
+
+        tagsFilter.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - tagsFilter.offsetLeft;
+            const walk = (x - startX) * 1.5; // scroll speed multiplier
+            if (Math.abs(walk) > 5) {
+                hasMoved = true;
+            }
+            tagsFilter.scrollLeft = scrollLeft - walk;
+        });
+
+        // Prevent clicking tag elements if mouse was being dragged
+        tagsFilter.addEventListener('click', (e) => {
+            if (hasMoved) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        }, true);
     }
 
     function populateCategories() {

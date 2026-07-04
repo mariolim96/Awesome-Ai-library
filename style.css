@@ -308,6 +308,12 @@ body {
     -webkit-mask-image: linear-gradient(to right, transparent, white 8%, white 92%, transparent);
     transition: all 0.3s ease;
     scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.tags-filter-container.active-dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
 }
 
 .tags-filter-container.expanded {
@@ -318,6 +324,7 @@ body {
     mask-image: none;
     -webkit-mask-image: none;
     padding: 0.5rem 1rem; /* Reset padding when wrapped */
+    cursor: default;
 }
 
 .tags-filter-container::-webkit-scrollbar {
