@@ -158,5 +158,13 @@ const LIBRARIES_DATA = [
     "category": "Agent Skills",
     "description": "A set of rules (often used as CLAUDE.md) based on Andrej Karpathy's guidelines to prevent AI coding assistants from over-engineering or making unverified modifications.",
     "tags": ["Coding Agent", "Guidelines", "CLAUDE.md", "Karpathy"]
+  },
+  {
+    "name": "opensrc (by vercel-labs)",
+    "owner": "vercel-labs",
+    "url": "https://github.com/vercel-labs/opensrc",
+    "category": "Optimization & Tooling",
+    "description": "A developer CLI tool designed to fetch the source code of npm packages, providing AI coding agents with deep, accurate context on library internals.",
+    "tags": ["Codebase", "Context", "CLI", "NPM Source"]
   }
 ];

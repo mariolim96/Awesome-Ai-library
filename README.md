@@ -37,3 +37,4 @@ To open the portal, simply serve the files locally or open `index.html` in your 
 ### Optimization & Tooling
 * **[caveman-compression](https://github.com/wilpel/caveman-compression)**: Prompt compression utility saving up to 65% on token costs.
 * **[gstack](https://github.com/garrytan/gstack)**: Modular stack execution tool to manage development workflows.
+* **[opensrc (by vercel-labs)](https://github.com/vercel-labs/opensrc)**: Developer CLI tool to retrieve package source code for AI context enrichment.
