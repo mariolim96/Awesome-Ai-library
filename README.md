@@ -13,17 +13,20 @@ To open the portal, simply serve the files locally or open `index.html` in your 
 * **[crewAI (by joaomdmoura)](https://github.com/crewAIInc/crewAI)**: High-level framework for orchestrating role-playing autonomous AI agents.
 * **[autogen (by microsoft)](https://github.com/microsoft/autogen)**: Multi-agent conversational capability framework for building LLM apps.
 * **[langgraph (by langchain-ai)](https://github.com/langchain-ai/langgraph)**: Stateful multi-actor orchestration framework designed for agentic loops.
+* **[daytona (by daytonaio)](https://github.com/daytonaio/daytona)**: Secure, ephemeral development environment manager and sandboxing platform for AI agents.
 
 ### Agent Skills
 * **[agent-skills (by addyosmani)](https://github.com/addyosmani/agent-skills)**: Set of modular skills and tools ready for AI coding assistants.
 * **[skills (by mattpocock)](https://github.com/mattpocock/skills)**: Modular instruction actions and utilities for workflows and automations.
 * **[ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)**: Fine-tuned system prompts and templates for premium UI/UX design.
 * **[career-ops](https://github.com/santifer/career-ops)**: Pipelines and resume optimization for career operations.
+* **[code-structure (by michaelshimeles)](https://github.com/michaelshimeles/skills/tree/main/code-structure)**: Structured agent skill guide for optimizing codebase navigation and implementation of Service Layers.
 
 ### Codebase & Graph Analysis
 * **[Understand-Anything](https://github.com/Egonex-AI/Understand-Anything)**: Interactive knowledge graph converter for repository deep-dives.
 * **[code-review-graph](https://github.com/tirth8205/code-review-graph)**: Graph-assisted static analysis and PR review helper.
 * **[graphify](https://github.com/Graphify-Labs/graphify)**: Graph representation and structures built for AI ingestion.
+* **[greptile (by greptile)](https://github.com/greptile/mcp-server)**: AI code search, codebase understanding, and automated review integration featuring PR loops (/greploop).
 
 ### RAG & Vector Search
 * **[LlamaIndex (by run-llama)](https://github.com/run-llama/llama_index)**: Comprehensive data connections and context injection framework for RAG apps.
