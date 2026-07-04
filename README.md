@@ -21,6 +21,7 @@ To open the portal, simply serve the files locally or open `index.html` in your 
 * **[ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)**: Fine-tuned system prompts and templates for premium UI/UX design.
 * **[career-ops](https://github.com/santifer/career-ops)**: Pipelines and resume optimization for career operations.
 * **[code-structure (by michaelshimeles)](https://github.com/michaelshimeles/skills/tree/main/code-structure)**: Structured agent skill guide for optimizing codebase navigation and implementation of Service Layers.
+* **[andrej-karpathy-skills (by multica-ai)](https://github.com/multica-ai/andrej-karpathy-skills)**: Behavioral coding guidelines and instructions based on Andrej Karpathy's rules for preventing AI assistant pitfalls.
 
 ### Codebase & Graph Analysis
 * **[Understand-Anything](https://github.com/Egonex-AI/Understand-Anything)**: Interactive knowledge graph converter for repository deep-dives.

@@ -202,6 +202,14 @@ body {
     position: relative;
 }
 
+.tags-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+
 .filter-label {
     font-size: 0.75rem;
     color: var(--text-secondary);
@@ -209,6 +217,35 @@ body {
     letter-spacing: 0.1em;
     font-weight: 600;
     opacity: 0.8;
+}
+
+.layout-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--gradient-start);
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.layout-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.layout-toggle-btn.expanded .toggle-icon {
+    transform: rotate(180deg);
 }
 
 .tags-filter-container {
@@ -222,6 +259,16 @@ body {
     -ms-overflow-style: none; /* IE 10+ */
     mask-image: linear-gradient(to right, transparent, white 8%, white 92%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, white 8%, white 92%, transparent);
+    transition: all 0.3s ease;
+}
+
+.tags-filter-container.expanded {
+    flex-wrap: wrap;
+    white-space: normal;
+    overflow-x: visible;
+    justify-content: center;
+    mask-image: none;
+    -webkit-mask-image: none;
 }
 
 .tags-filter-container::-webkit-scrollbar {

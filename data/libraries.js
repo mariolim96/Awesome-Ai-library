@@ -150,5 +150,13 @@ const LIBRARIES_DATA = [
     "category": "Codebase & Graph Analysis",
     "description": "AI-powered code search, codebase understanding, and automated review integration featuring interactive feedback PR loops (/greploop).",
     "tags": ["Code Review", "MCP", "AI Review", "PR Loop"]
+  },
+  {
+    "name": "andrej-karpathy-skills (by multica-ai)",
+    "owner": "multica-ai",
+    "url": "https://github.com/multica-ai/andrej-karpathy-skills",
+    "category": "Agent Skills",
+    "description": "A set of rules (often used as CLAUDE.md) based on Andrej Karpathy's guidelines to prevent AI coding assistants from over-engineering or making unverified modifications.",
+    "tags": ["Coding Agent", "Guidelines", "CLAUDE.md", "Karpathy"]
   }
 ];
