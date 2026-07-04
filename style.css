@@ -190,6 +190,56 @@ body {
     box-shadow: 0 4px 15px var(--primary-glow);
 }
 
+/* Tag Filters Section */
+.tags-filter-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.filter-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.tags-filter-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.tag-btn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--card-border);
+    color: var(--text-secondary);
+    padding: 0.35rem 0.8rem;
+    border-radius: 9999px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tag-btn:hover {
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.tag-btn.active {
+    background: var(--tag-bg);
+    border-color: var(--primary-color);
+    color: var(--tag-text);
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.1);
+}
+
 /* Stats Counter */
 .stats-counter {
     font-size: 0.9rem;
