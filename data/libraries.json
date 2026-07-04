@@ -166,5 +166,21 @@
     "category": "Optimization & Tooling",
     "description": "A developer CLI tool designed to fetch the source code of npm packages, providing AI coding agents with deep, accurate context on library internals.",
     "tags": ["Codebase", "Context", "CLI", "NPM Source"]
+  },
+  {
+    "name": "mcp-servers (by modelcontextprotocol)",
+    "owner": "modelcontextprotocol",
+    "url": "https://github.com/modelcontextprotocol/servers",
+    "category": "Optimization & Tooling",
+    "description": "A collection of reference Model Context Protocol (MCP) servers providing standard tools, resources, and prompt context to AI clients.",
+    "tags": ["MCP", "Server", "Integrations", "Model Context"]
+  },
+  {
+    "name": "dspy (by stanfordnlp)",
+    "owner": "stanfordnlp",
+    "url": "https://github.com/stanfordnlp/dspy",
+    "category": "Optimization & Tooling",
+    "description": "A framework for programmatically defining, optimizing, and compiling language model prompts and weights instead of manual prompting.",
+    "tags": ["Prompt Optimization", "Compilation", "LLM Programming"]
   }
 ]
