@@ -248,60 +248,13 @@ body {
     transform: rotate(180deg);
 }
 
-.tags-slider-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.scroll-arrow-btn {
-    position: absolute;
-    z-index: 10;
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid var(--card-border);
-    border-radius: 50%;
-    color: var(--text-primary);
-    cursor: pointer;
-    width: 2.2rem;
-    height: 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(8px);
-    transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.scroll-arrow-btn:hover {
-    background: rgba(99, 102, 241, 0.2);
-    border-color: var(--primary-color);
-    color: white;
-    transform: scale(1.05);
-}
-
-.scroll-left {
-    left: 0.5rem;
-}
-
-.scroll-right {
-    right: 0.5rem;
-}
-
-/* Hide scroll buttons when expanded */
-.tags-filter-wrapper.expanded .scroll-arrow-btn {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-}
-
 .tags-filter-container {
     display: flex;
     gap: 0.6rem;
     overflow-x: auto;
     white-space: nowrap;
     width: 100%;
-    padding: 0.5rem 3.5rem; /* Increased padding on sides to make room for absolute arrows */
+    padding: 0.5rem 1.5rem;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE 10+ */
     mask-image: linear-gradient(to right, transparent, white 8%, white 92%, transparent);

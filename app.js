@@ -46,15 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleBtn.querySelector('span').textContent = isExpanded ? 'Show Less' : 'Show All';
         });
 
-        // Horizontal scroll button event listeners
-        const scrollLeftBtn = document.getElementById('scroll-tags-left');
-        const scrollRightBtn = document.getElementById('scroll-tags-right');
-        scrollLeftBtn.addEventListener('click', () => {
-            tagsFilter.scrollBy({ left: -250, behavior: 'smooth' });
-        });
-        scrollRightBtn.addEventListener('click', () => {
-            tagsFilter.scrollBy({ left: 250, behavior: 'smooth' });
-        });
+
 
         // Translate vertical scroll wheel into horizontal scroll on tags slider
         tagsFilter.addEventListener('wheel', (e) => {
