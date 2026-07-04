@@ -32,11 +32,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository (excluding git folder and hidden agents configs if you want, or just upload current directory)
+          # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
