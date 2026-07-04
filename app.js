@@ -30,9 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
         populateTags();
         renderLibraries();
 
-        // Setup event listeners
+        // Setup event listeners with bi-directional tag sync
         searchInput.addEventListener('input', (e) => {
-            searchQuery = e.target.value.toLowerCase().trim();
+            const rawVal = e.target.value;
+            
+            // Extract hashtags (e.g. #Skills) from the input
+            const hashTags = rawVal.match(/#[a-zA-Z0-9-_\s']+/gi) || [];
+            
+            selectedTags.clear();
+            hashTags.forEach(hashTag => {
+                // Remove '#' and trim to match tag format
+                const tagVal = hashTag.substring(1).trim();
+                selectedTags.add(tagVal);
+            });
+
+            // Update active states on tag buttons without full repopulation to preserve scroll position
+            syncTagButtonsUI();
+            
+            // Save clean search query (removing hashtags from the text search query)
+            searchQuery = rawVal.replace(/#[a-zA-Z0-9-_\s']+/gi, '').toLowerCase().trim();
             renderLibraries();
         });
     }
@@ -56,6 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 currentCategory = cat;
                 selectedTags.clear(); // Reset tag filters when switching category
+                
+                // Clear hashtags from search input
+                searchInput.value = searchInput.value.replace(/#[a-zA-Z0-9-_\s']+/gi, '').trim();
+                searchQuery = searchInput.value.toLowerCase().trim();
+                
                 populateTags();
                 renderLibraries();
             });
@@ -82,18 +103,40 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.textContent = `#${tag}`;
             
             btn.addEventListener('click', () => {
-                if (selectedTags.has(tag)) {
-                    selectedTags.delete(tag);
-                    btn.classList.remove('active');
-                } else {
-                    selectedTags.add(tag);
-                    btn.classList.add('active');
-                }
-                renderLibraries();
+                handleTagToggle(tag);
             });
 
             tagsFilter.appendChild(btn);
         });
+    }
+
+    function syncTagButtonsUI() {
+        document.querySelectorAll('.tags-filter-container .tag-btn').forEach(btn => {
+            const tagVal = btn.textContent.replace('#', '');
+            if (selectedTags.has(tagVal)) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+    }
+
+    function handleTagToggle(tag) {
+        if (selectedTags.has(tag)) {
+            selectedTags.delete(tag);
+        } else {
+            selectedTags.add(tag);
+        }
+
+        // Update search input text with selected tags
+        let textWithoutTags = searchInput.value.replace(/#[a-zA-Z0-9-_\s']+/gi, '').trim();
+        const tagsString = [...selectedTags].map(t => `#${t}`).join(' ');
+        searchInput.value = (textWithoutTags + (tagsString ? ' ' + tagsString : '')).trim();
+        
+        searchQuery = textWithoutTags.toLowerCase().trim();
+
+        populateTags();
+        renderLibraries();
     }
 
     function renderLibraries() {
@@ -155,17 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.library-card .tag').forEach(tagEl => {
             tagEl.addEventListener('click', (e) => {
                 const tagValue = e.target.textContent.replace('#', '');
-                
-                // Toggle active state in selectedTags set
-                if (selectedTags.has(tagValue)) {
-                    selectedTags.delete(tagValue);
-                } else {
-                    selectedTags.add(tagValue);
-                }
-
-                // Synchronize tag buttons active state
-                populateTags();
-                renderLibraries();
+                handleTagToggle(tagValue);
             });
         });
     }
