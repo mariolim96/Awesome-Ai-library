@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome AI Library - Curation Portal</title>
+    <meta name="description" content="Una collezione curata di librerie, framework e skill eccezionali per agenti AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Glow Elements -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+
+    <header class="app-header">
+        <div class="header-container">
+            <h1 class="logo-title">Awesome <span class="gradient-text">AI Library</span></h1>
+            <p class="logo-tagline">Una lista curata di librerie, harness e skill eccezionali per l'Intelligenza Artificiale.</p>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <section class="controls-section">
+            <div class="search-wrapper">
+                <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <input type="text" id="search-input" placeholder="Cerca per nome, tag o descrizione..." aria-label="Cerca librerie">
+            </div>
+
+            <div class="categories-container" id="categories-filter" role="group" aria-label="Filtra per categoria">
+                <button class="filter-btn active" data-category="all">Tutte</button>
+                <!-- Categories will be populated dynamically -->
+            </div>
+        </section>
+
+        <section class="grid-section">
+            <div class="stats-counter" id="stats-counter">
+                Mostrate <span id="visible-count">0</span> di <span id="total-count">0</span> librerie
+            </div>
+            
+            <div class="library-grid" id="library-grid">
+                <!-- Library cards will be populated dynamically -->
+                <div class="loading-state">Caricamento delle librerie...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Awesome AI Library © 2026 • Creato con cura per la community di sviluppatori AI</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
