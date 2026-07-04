@@ -11,22 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const visibleCount = document.getElementById('visible-count');
     const totalCount = document.getElementById('total-count');
 
-    // Fetch data from local JSON database
-    fetch('data/libraries.json')
-        .then(response => response.json())
-        .then(data => {
-            libraries = data;
-            initPortal();
-        })
-        .catch(err => {
-            console.error('Error loading libraries:', err);
-            libraryGrid.innerHTML = `
-                <div class="empty-state">
-                    An error occurred while loading the libraries database.<br>
-                    Please check the console for more details.
-                </div>
-            `;
-        });
+    // Load data from global libraries.js script (bypasses local filesystem CORS issues)
+    if (typeof LIBRARIES_DATA !== 'undefined') {
+        libraries = LIBRARIES_DATA;
+        initPortal();
+    } else {
+        console.error('Error: LIBRARIES_DATA is not defined.');
+        libraryGrid.innerHTML = `
+            <div class="empty-state">
+                An error occurred: Database variable not found.
+            </div>
+        `;
+    }
 
     function initPortal() {
         totalCount.textContent = libraries.length;

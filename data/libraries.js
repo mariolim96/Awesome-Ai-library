@@ -1,0 +1,154 @@
+const LIBRARIES_DATA = [
+  {
+    "name": "awesome-agent-harness",
+    "owner": "Picrew",
+    "url": "https://github.com/Picrew/awesome-agent-harness",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A curated list and engineering resources centered around AI Agent Harnesses: the deterministic wrappers that manage session state, contexts, tool invocation, and guardrails to ensure consistent agentic execution.",
+    "tags": ["Agent Harness", "Infrastructure", "Orchestration", "Curated List"]
+  },
+  {
+    "name": "agent-skills (by addyosmani)",
+    "owner": "addyosmani",
+    "url": "https://github.com/addyosmani/agent-skills",
+    "category": "Agent Skills",
+    "description": "A set of production-ready, modular skills designed to empower AI coding agents and assistants with robust custom tools, actions, and instructions.",
+    "tags": ["Skills", "MCP", "Coding Assistant", "Modular"]
+  },
+  {
+    "name": "Understand-Anything",
+    "owner": "Egonex-AI",
+    "url": "https://github.com/Egonex-AI/Understand-Anything",
+    "category": "Codebase & Graph Analysis",
+    "description": "Transforms complex codebases into interactive knowledge graphs, helping AI agents and developers visualize dependencies, functions, and module associations in real-time.",
+    "tags": ["Knowledge Graphs", "Codebase Analysis", "Visualization"]
+  },
+  {
+    "name": "skills (by mattpocock)",
+    "owner": "mattpocock",
+    "url": "https://github.com/mattpocock/skills",
+    "category": "Agent Skills",
+    "description": "Modular utility actions and instruction sets designed to expand the skill set of AI workflows, automations, and developer environments.",
+    "tags": ["Developer Skills", "Automation", "Utilities"]
+  },
+  {
+    "name": "ui-ux-pro-max-skill",
+    "owner": "nextlevelbuilder",
+    "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+    "category": "Agent Skills",
+    "description": "A highly refined system prompt and skill bundle that guides AI agents in generating top-tier, modern UI/UX design patterns, styling strategies, and interface layouts.",
+    "tags": ["UI/UX", "Design System", "System Prompt"]
+  },
+  {
+    "name": "graphify",
+    "owner": "Graphify-Labs",
+    "url": "https://github.com/Graphify-Labs/graphify",
+    "category": "Codebase & Graph Analysis",
+    "description": "A graph-based library for representing, organizing, and querying complex data structures, tailor-made for ingestion into AI knowledge systems.",
+    "tags": ["Graphs", "Database", "Knowledge Representation"]
+  },
+  {
+    "name": "career-ops",
+    "owner": "santifer",
+    "url": "https://github.com/santifer/career-ops",
+    "category": "Agent Skills",
+    "description": "A specialized toolset and skill collection focused on resume optimizing, career management, and operational pipelines powered by AI.",
+    "tags": ["Career", "Automation", "Optimizing"]
+  },
+  {
+    "name": "caveman-compression",
+    "owner": "wilpel",
+    "url": "https://github.com/wilpel/caveman-compression",
+    "category": "Optimization & Tooling",
+    "description": "A prompt/token optimization skill that compresses agent communications to reduce token usage significantly (up to 65%) without losing semantic context.",
+    "tags": ["Token Optimization", "Compression", "Efficiency"]
+  },
+  {
+    "name": "code-review-graph",
+    "owner": "tirth8205",
+    "url": "https://github.com/tirth8205/code-review-graph",
+    "category": "Codebase & Graph Analysis",
+    "description": "Analyzes code reviews and pull requests using graph networks to detect patterns, structural risks, and dependencies before merging changes.",
+    "tags": ["Code Review", "Graph Analysis", "Static Analysis"]
+  },
+  {
+    "name": "gstack",
+    "owner": "garrytan",
+    "url": "https://github.com/garrytan/gstack",
+    "category": "Optimization & Tooling",
+    "description": "An elegant stack execution helper and utility set built to simplify complex layered operations and run environments for developers and AI engines.",
+    "tags": ["Stack Helper", "Tooling", "Utilities"]
+  },
+  {
+    "name": "crewAI (by joaomdmoura)",
+    "owner": "joaomdmoura",
+    "url": "https://github.com/crewAIInc/crewAI",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A high-level framework for orchestrating role-playing autonomous AI agents, enabling them to work together to complete complex tasks.",
+    "tags": ["Agent Framework", "Multi-Agent", "Orchestration"]
+  },
+  {
+    "name": "autogen (by microsoft)",
+    "owner": "microsoft",
+    "url": "https://github.com/microsoft/autogen",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A framework that enables development of LLM applications using multiple agents that can converse with each other to solve tasks.",
+    "tags": ["Multi-Agent", "Conversational", "AI Agents"]
+  },
+  {
+    "name": "langgraph (by langchain-ai)",
+    "owner": "langchain-ai",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A library for building stateful, multi-actor applications with LLMs, ideal for creating agent loops and complex graph-based flows.",
+    "tags": ["State Machine", "Agent Loops", "Graphs"]
+  },
+  {
+    "name": "LlamaIndex (by run-llama)",
+    "owner": "run-llama",
+    "url": "https://github.com/run-llama/llama_index",
+    "category": "RAG & Vector Search",
+    "description": "A comprehensive data framework for connecting custom data sources to large language models (LLMs) to power Retrieval-Augmented Generation.",
+    "tags": ["RAG", "Data Connectors", "Context Injection"]
+  },
+  {
+    "name": "qdrant (by qdrant)",
+    "owner": "qdrant",
+    "url": "https://github.com/qdrant/qdrant",
+    "category": "RAG & Vector Search",
+    "description": "A production-ready, high-performance vector similarity search engine and database with an easy-to-use API.",
+    "tags": ["Vector Database", "Semantic Search", "Production RAG"]
+  },
+  {
+    "name": "chroma (by chroma-core)",
+    "owner": "chroma-core",
+    "url": "https://github.com/chroma-core/chroma",
+    "category": "RAG & Vector Search",
+    "description": "The open-source embedding database designed to make it simple to build AI applications by storing and querying embeddings.",
+    "tags": ["Vector Database", "Embeddings", "Fast Prototyping"]
+  },
+  {
+    "name": "daytona (by daytonaio)",
+    "owner": "daytonaio",
+    "url": "https://github.com/daytonaio/daytona",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A secure, ephemeral development environment manager and sandboxing platform designed to isolate and run AI agent execution tasks safely.",
+    "tags": ["Sandbox", "Security", "Developer Environment"]
+  },
+  {
+    "name": "code-structure (by michaelshimeles)",
+    "owner": "michaelshimeles",
+    "url": "https://github.com/michaelshimeles/skills/tree/main/code-structure",
+    "category": "Agent Skills",
+    "description": "A structured agent skill guide for optimizing codebase navigation and implementing clean Service Layer patterns inside agent workflows.",
+    "tags": ["Architecture", "Codebase Navigation", "Clean Code"]
+  },
+  {
+    "name": "greptile (by greptile)",
+    "owner": "greptile",
+    "url": "https://github.com/greptile/mcp-server",
+    "category": "Codebase & Graph Analysis",
+    "description": "AI-powered code search, codebase understanding, and automated review integration featuring interactive feedback PR loops (/greploop).",
+    "tags": ["Code Review", "MCP", "AI Review", "PR Loop"]
+  }
+];
