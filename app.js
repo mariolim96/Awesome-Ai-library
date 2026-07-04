@@ -38,10 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Toggle tags layout (expand / wrap all tags)
         const toggleBtn = document.getElementById('toggle-tags-layout');
+        const tagsWrapper = document.getElementById('tags-filter-wrapper');
         toggleBtn.addEventListener('click', () => {
             const isExpanded = tagsFilter.classList.toggle('expanded');
+            tagsWrapper.classList.toggle('expanded', isExpanded);
             toggleBtn.classList.toggle('expanded', isExpanded);
             toggleBtn.querySelector('span').textContent = isExpanded ? 'Show Less' : 'Show All';
+        });
+
+        // Horizontal scroll button event listeners
+        const scrollLeftBtn = document.getElementById('scroll-tags-left');
+        const scrollRightBtn = document.getElementById('scroll-tags-right');
+        scrollLeftBtn.addEventListener('click', () => {
+            tagsFilter.scrollBy({ left: -250, behavior: 'smooth' });
+        });
+        scrollRightBtn.addEventListener('click', () => {
+            tagsFilter.scrollBy({ left: 250, behavior: 'smooth' });
         });
     }
 
@@ -67,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Collapse tag slider on category change
                 tagsFilter.classList.remove('expanded');
+                const tagsWrapper = document.getElementById('tags-filter-wrapper');
+                tagsWrapper.classList.remove('expanded');
                 const toggleBtn = document.getElementById('toggle-tags-layout');
                 toggleBtn.classList.remove('expanded');
                 toggleBtn.querySelector('span').textContent = 'Show All';
