@@ -78,5 +78,53 @@
     "category": "Optimization & Tooling",
     "description": "An elegant stack execution helper and utility set built to simplify complex layered operations and run environments for developers and AI engines.",
     "tags": ["Stack Helper", "Tooling", "Utilities"]
+  },
+  {
+    "name": "crewAI (by joaomdmoura)",
+    "owner": "joaomdmoura",
+    "url": "https://github.com/crewAIInc/crewAI",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A high-level framework for orchestrating role-playing autonomous AI agents, enabling them to work together to complete complex tasks.",
+    "tags": ["Agent Framework", "Multi-Agent", "Orchestration"]
+  },
+  {
+    "name": "autogen (by microsoft)",
+    "owner": "microsoft",
+    "url": "https://github.com/microsoft/autogen",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A framework that enables development of LLM applications using multiple agents that can converse with each other to solve tasks.",
+    "tags": ["Multi-Agent", "Conversational", "AI Agents"]
+  },
+  {
+    "name": "langgraph (by langchain-ai)",
+    "owner": "langchain-ai",
+    "url": "https://github.com/langchain-ai/langgraph",
+    "category": "Agent Harnesses & Frameworks",
+    "description": "A library for building stateful, multi-actor applications with LLMs, ideal for creating agent loops and complex graph-based flows.",
+    "tags": ["State Machine", "Agent Loops", "Graphs"]
+  },
+  {
+    "name": "LlamaIndex (by run-llama)",
+    "owner": "run-llama",
+    "url": "https://github.com/run-llama/llama_index",
+    "category": "RAG & Vector Search",
+    "description": "A comprehensive data framework for connecting custom data sources to large language models (LLMs) to power Retrieval-Augmented Generation.",
+    "tags": ["RAG", "Data Connectors", "Context Injection"]
+  },
+  {
+    "name": "qdrant (by qdrant)",
+    "owner": "qdrant",
+    "url": "https://github.com/qdrant/qdrant",
+    "category": "RAG & Vector Search",
+    "description": "A production-ready, high-performance vector similarity search engine and database with an easy-to-use API.",
+    "tags": ["Vector Database", "Semantic Search", "Production RAG"]
+  },
+  {
+    "name": "chroma (by chroma-core)",
+    "owner": "chroma-core",
+    "url": "https://github.com/chroma-core/chroma",
+    "category": "RAG & Vector Search",
+    "description": "The open-source embedding database designed to make it simple to build AI applications by storing and querying embeddings.",
+    "tags": ["Vector Database", "Embeddings", "Fast Prototyping"]
   }
 ]
