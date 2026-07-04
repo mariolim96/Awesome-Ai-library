@@ -4,11 +4,11 @@
     "owner": "Picrew",
     "url": "https://github.com/Picrew/awesome-agent-harness",
     "category": "Agent Harnesses & Frameworks",
-    "description": "A curated list and resources centered around AI Agent Harnesses: the deterministic wrappers that manage session state, contexts, tool invocation, and guardrails to ensure consistent agentic execution.",
+    "description": "A curated list and engineering resources centered around AI Agent Harnesses: the deterministic wrappers that manage session state, contexts, tool invocation, and guardrails to ensure consistent agentic execution.",
     "tags": ["Agent Harness", "Infrastructure", "Orchestration", "Curated List"]
   },
   {
-    "name": "agent-skills",
+    "name": "agent-skills (by addyosmani)",
     "owner": "addyosmani",
     "url": "https://github.com/addyosmani/agent-skills",
     "category": "Agent Skills",
@@ -24,7 +24,7 @@
     "tags": ["Knowledge Graphs", "Codebase Analysis", "Visualization"]
   },
   {
-    "name": "skills",
+    "name": "skills (by mattpocock)",
     "owner": "mattpocock",
     "url": "https://github.com/mattpocock/skills",
     "category": "Agent Skills",

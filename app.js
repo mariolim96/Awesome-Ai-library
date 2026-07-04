@@ -17,11 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
             initPortal();
         })
         .catch(err => {
-            console.error('Errore nel caricamento delle librerie:', err);
+            console.error('Error loading libraries:', err);
             libraryGrid.innerHTML = `
                 <div class="empty-state">
-                    Si è verificato un errore nel caricamento del database delle librerie.<br>
-                    Controlla la console per maggiori dettagli.
+                    An error occurred while loading the libraries database.<br>
+                    Please check the console for more details.
                 </div>
             `;
         });
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = document.createElement('button');
             btn.className = `filter-btn ${cat === 'all' ? 'active' : ''}`;
             btn.dataset.category = cat;
-            btn.textContent = cat === 'all' ? 'Tutte' : cat;
+            btn.textContent = cat === 'all' ? 'All' : cat;
             
             btn.addEventListener('click', (e) => {
                 // Toggle active state
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (filtered.length === 0) {
             libraryGrid.innerHTML = `
                 <div class="empty-state">
-                    Nessuna libreria corrisponde ai criteri di ricerca selezionati.
+                    No libraries match the selected search criteria.
                 </div>
             `;
             return;
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="card-actions">
                     <a href="${lib.url}" target="_blank" rel="noopener noreferrer" class="repo-link">
-                        Vedi Repository 
+                        View Repository 
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
